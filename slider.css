@@ -1,5 +1,6 @@
 .slider-container {
   position: relative;
+  background:#000;
 }
 .slider-images {
   width: 100%;
@@ -8,6 +9,8 @@
 }
 .slider-images img {
   max-width: 100%;
+  height: 300px; /* set a fixed height */
+  width: auto; /* set width to auto to maintain aspect ratio */
   display: none;
 }
 .slider-images img.active {
