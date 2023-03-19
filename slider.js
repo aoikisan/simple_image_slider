@@ -1,3 +1,4 @@
+//https://github.com/aoikisan/simple_image_slider
 $(document).ready(function() {
   var slideIndex = 1;
   showSlide(slideIndex);
@@ -9,6 +10,10 @@ $(document).ready(function() {
   $(".slider-next").click(function() {
     showSlide(slideIndex += 1);
   });
+  
+  setInterval(function() {
+	    showSlide(slideIndex += 1);
+	  }, 5000);
   
   function showSlide(n) {
     var i;
@@ -23,6 +28,6 @@ $(document).ready(function() {
     }
     slides[slideIndex-1].classList.add("active");
     
-    texts.html("<h2>" + slides[slideIndex-1].alt + "</h2><p>Contextual subtext about the image.</p>");
+    texts.html("<h2>" + slides[slideIndex-1].alt + "</h2>");
   }
 });
